@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wardah Beauty - Kontak</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">WARDAH</div>
+
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="produk.html">Produk</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="kontak.html" class="active">Kontak</a>
+        </nav>
+
+        <a href="produk.html" class="cart-link">
+            🛒 Keranjang
+        </a>
+    </header>
+
+    <main>
+
+        <section class="page-title">
+            <p class="subtitle">CONTACT US</p>
+            <h1>Hubungi Kami</h1>
+            <p>
+                Ada pertanyaan? Silakan kirim pesan melalui form.
+            </p>
+        </section>
+
+        <section class="contact">
+
+            <div class="contact-info">
+
+                <h2>Informasi Kontak</h2>
+
+                <div class="contact-item">
+                    <span>📧</span>
+                    <div>
+                        <h3>Email</h3>
+                        <p>wardahbeauty@example.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span>📱</span>
+                    <div>
+                        <h3>Telepon</h3>
+                        <p>+62 812 3456 7890</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span>📍</span>
+                    <div>
+                        <h3>Lokasi</h3>
+                        <p>Indonesia</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <form id="contactForm" class="contact-form">
+
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        placeholder="Masukkan nama"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Masukkan email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="pesan">Pesan</label>
+                    <textarea
+                        id="pesan"
+                        name="pesan"
+                        rows="5"
+                        placeholder="Tulis pesan kamu..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="main-button">
+                    Kirim Pesan 💌
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Wardah Beauty Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wardah Beauty - Produk</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">WARDAH</div>
+
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="produk.html" class="active">Produk</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="kontak.html">Kontak</a>
+        </nav>
+
+        <button class="cart-button" id="cartButton">
+            🛒 Keranjang
+            <span id="cartCount">0</span>
+        </button>
+    </header>
+
+    <main>
+
+        <section class="page-title">
+            <p class="subtitle">OUR PRODUCTS</p>
+            <h1>Produk Wardah</h1>
+            <p>
+                Pilih produk skincare dan makeup favoritmu.
+            </p>
+        </section>
+
+        <section class="product-section">
+
+            <!-- SEARCH -->
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔍 Cari produk..."
+                    aria-label="Cari produk"
+                >
+            </div>
+
+            <!-- FILTER -->
+            <div class="filter">
+                <button
+                    type="button"
+                    class="filter-btn active"
+                    data-filter="semua">
+                    Semua
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="skincare">
+                    Skincare
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="makeup">
+                    Makeup
+                </button>
+            </div>
+
+            <p id="jumlahProduk" class="jumlah-produk"></p>
+
+            <!-- PRODUK AKAN DITAMPILKAN JAVASCRIPT -->
+            <div id="productList" class="product-list"></div>
+
+            <p id="produkKosong" class="produk-kosong">
+                Produk tidak ditemukan.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Wardah Beauty Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
