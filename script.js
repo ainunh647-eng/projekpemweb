@@ -1,7 +1,3 @@
-/* =====================================
-   DATA PRODUK
-===================================== */
-
 const produk = [
     {
         nama: "Wardah Lightening Whip Facial Foam",
@@ -46,19 +42,8 @@ const produk = [
     }
 ];
 
-
-/* =====================================
-   VARIABEL
-===================================== */
-
 let jumlahKeranjang = 0;
-
 let kategoriAktif = "semua";
-
-
-/* =====================================
-   MENAMPILKAN PRODUK
-===================================== */
 
 function tampilkanProduk(data) {
 
@@ -71,25 +56,17 @@ function tampilkanProduk(data) {
     const produkKosong =
         document.getElementById("produkKosong");
 
-
-    // Kalau halaman bukan halaman produk
     if (!productList) {
         return;
     }
 
-
-    // Kosongkan produk sebelumnya
     productList.innerHTML = "";
 
-
-    // Tampilkan jumlah produk
     if (jumlahProduk) {
         jumlahProduk.textContent =
             "Menampilkan " + data.length + " produk";
     }
 
-
-    // Kalau produk tidak ditemukan
     if (data.length === 0) {
 
         if (produkKosong) {
@@ -105,8 +82,6 @@ function tampilkanProduk(data) {
         }
     }
 
-
-    // Loop semua produk
     data.forEach(function(item) {
 
         const article =
@@ -119,7 +94,6 @@ function tampilkanProduk(data) {
             <img
                 src="${item.gambar}"
                 alt="${item.nama}"
-                onerror="this.src='https://via.placeholder.com/400x300?text=Wardah+Product'"
             >
 
             <p class="kategori">
