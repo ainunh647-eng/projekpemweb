@@ -128,9 +128,6 @@ function tampilkanProduk(data) {
             </div>
         `;
 
-
-        /* Tombol Beli */
-
         const tombolBeli =
             article.querySelector(".beli");
 
@@ -142,9 +139,6 @@ function tampilkanProduk(data) {
 
             }
         );
-
-
-        /* Tombol Favorit */
 
         const tombolFavorit =
             article.querySelector(".favorite");
@@ -164,17 +158,10 @@ function tampilkanProduk(data) {
     });
 }
 
-
-/* =====================================
-   BELI PRODUK
-===================================== */
-
 function beliProduk(nama) {
 
     jumlahKeranjang++;
 
-
-    // Update angka keranjang
     const cartCount =
         document.getElementById("cartCount");
 
@@ -244,11 +231,6 @@ function favoriteProduk(button) {
     }
 }
 
-
-/* =====================================
-   FILTER PRODUK
-===================================== */
-
 const filterButtons =
     document.querySelectorAll(".filter-btn");
 
@@ -262,8 +244,6 @@ filterButtons.forEach(function(button) {
             kategoriAktif =
                 button.getAttribute("data-filter");
 
-
-            // Ubah tombol aktif
             filterButtons.forEach(
                 function(btn) {
 
@@ -275,18 +255,12 @@ filterButtons.forEach(function(button) {
 
             button.classList.add("active");
 
-
             filterProduk();
 
         }
     );
 
 });
-
-
-/* =====================================
-   SEARCH PRODUK
-===================================== */
 
 const searchInput =
     document.getElementById("searchInput");
@@ -304,11 +278,6 @@ if (searchInput) {
     );
 
 }
-
-
-/* =====================================
-   FILTER + SEARCH
-===================================== */
 
 function filterProduk() {
 
@@ -330,11 +299,6 @@ function filterProduk() {
 
     tampilkanProduk(hasil);
 }
-
-
-/* =====================================
-   KERANJANG
-===================================== */
 
 const cartButton =
     document.getElementById("cartButton");
@@ -389,11 +353,6 @@ if (cartButton) {
 
 }
 
-
-/* =====================================
-   FORM KONTAK
-===================================== */
-
 const contactForm =
     document.getElementById("contactForm");
 
@@ -427,8 +386,6 @@ if (contactForm) {
                     .value
                     .trim();
 
-
-            // Validasi
             if (
                 nama === "" ||
                 email === "" ||
@@ -451,8 +408,6 @@ if (contactForm) {
                 return;
             }
 
-
-            // Pesan berhasil
             Swal.fire({
 
                 title: "Pesan Terkirim! 💌",
@@ -470,18 +425,11 @@ if (contactForm) {
 
             });
 
-
-            // Reset form
             contactForm.reset();
 
         }
     );
 
 }
-
-
-/* =====================================
-   JALANKAN PRODUK
-===================================== */
 
 tampilkanProduk(produk);
